@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRONOVIAS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PRONOVIAS</h1>
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos">Quiénes somos</a></li>
+                <li><a href="#nuestros-vestidos">Nuestros vestidos</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
+        <img id="carrito-icono" src="carrito.png" alt="Carrito" />
+    </header>
+
+    <main>
+        <!-- Quiénes Somos -->
+        <section id="quienes-somos">
+            <h2>Quiénes somos</h2>
+            <p>
+                Somos una empresa que se dedica a la venta de vestidos de novias ofreciéndote un servicio
+                integral de asesoramiento a nuestros clientes sobre las tendencias del mundo nupcial.
+            </p>
+            <p>
+                Nuestro personal te ayudará en la elección de tú vestido, en las dudas y te aconsejarán
+                sobre el modelo y diseño que más te favorezca. Trabajamos con firmas Nacionales e Internacionales
+                para tu completa tranquilidad.
+            </p>
+            <p>
+                Para mayor comodidad y mejor servicio a nuestros clientes nos hemos adaptado a las nuevas
+                tecnologías donde te ofrecemos nuestros catálogos virtuales y nuestra presencia en redes
+                sociales como, Facebook, Instagram, Google Business, Bodas.Net.
+            </p>
+            <div>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+        </section>
+
+        <!-- Nuestros vestidos -->
+        <section id="nuestros-vestidos">
+            <h2 class="titulo-carrusel">Nuestros vestidos</h2>
+            <div id="carrusel-container" class="carrusel-container">
+                <button id="btn-anterior" class="navegacion izquierda">←</button>
+                <div id="carrusel-contenedor" class="carrusel-contenedor">
+                    <!-- Los productos se generarán dinámicamente -->
+                </div>
+                <button id="btn-siguiente" class="navegacion derecha">→</button>
+            </div>
+        </section>
+
+        <!-- Modal Carrito de Compras -->
+        <div id="carrito-modal" class="carrito-modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <p id="total-carrito">Total: €0.00</p>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="finalizar-compra">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <!-- Contáctanos -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Escríbenos, nos pondremos en contacto contigo a la mayor brevedad.</p>
+            <form id="form-contacto">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="telefono" placeholder="Teléfono" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="date" name="fecha-evento" placeholder="Fecha del evento" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <!-- Mensaje de éxito -->
+            <div id="mensaje-exito" style="display:none; color: green; margin-top: 10px;">¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</div>
+        </section>
+
+        <!-- Ubicación -->
+        <section id="ubicacion">
+            <h2>Ubicación</h2>
+            <p>C. Maninidra, 114, LOCAL, 35118 Cruce de Arinaga, Las Palmas</p>
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7053.682859841946!2d-15.426669!3d27.876141!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40a15fa572254f%3A0xa02d1cdcf2ba5abd!2sD&#39;%20Novias%20Gran%20Canaria!5e0!3m2!1ses!2ses!4v1732554277297!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PRONOVIAS. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
